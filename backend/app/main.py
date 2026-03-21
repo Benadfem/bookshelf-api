@@ -25,6 +25,6 @@ def health_check():
 
 # 1. Get all books
 @app.get("/v1/books")
-def get_books(db: Session = Depends(database.get_db)):
-    books = db.query(models.Book).all()
-    return books
+def get_books():
+    
+    return {"Message": "This will retrieve the books that is kept in the bookshelf"}
